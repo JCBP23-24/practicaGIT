@@ -33,7 +33,8 @@
             this.txtTelegrama = new System.Windows.Forms.TextBox();
             this.lblCoste = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.cbUrgente = new System.Windows.Forms.CheckBox();
+            this.radioButtonOrdinario = new System.Windows.Forms.RadioButton();
+            this.radioButtonUrgente = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnCalcular
@@ -83,29 +84,43 @@
             this.txtPrecio.Size = new System.Drawing.Size(131, 26);
             this.txtPrecio.TabIndex = 7;
             // 
-            // cbUrgente
+            // radioButtonOrdinario
             // 
-            this.cbUrgente.AutoSize = true;
-            this.cbUrgente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUrgente.Location = new System.Drawing.Point(82, 296);
-            this.cbUrgente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cbUrgente.Name = "cbUrgente";
-            this.cbUrgente.Size = new System.Drawing.Size(89, 19);
-            this.cbUrgente.TabIndex = 6;
-            this.cbUrgente.Text = "Urgente ?";
-            this.cbUrgente.UseVisualStyleBackColor = true;
+            this.radioButtonOrdinario.AutoSize = true;
+            this.radioButtonOrdinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonOrdinario.Location = new System.Drawing.Point(90, 294);
+            this.radioButtonOrdinario.Name = "radioButtonOrdinario";
+            this.radioButtonOrdinario.Size = new System.Drawing.Size(94, 21);
+            this.radioButtonOrdinario.TabIndex = 12;
+            this.radioButtonOrdinario.TabStop = true;
+            this.radioButtonOrdinario.Text = "Ordinario";
+            this.radioButtonOrdinario.UseVisualStyleBackColor = true;
+            this.radioButtonOrdinario.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButtonUrgente
+            // 
+            this.radioButtonUrgente.AutoSize = true;
+            this.radioButtonUrgente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonUrgente.Location = new System.Drawing.Point(190, 294);
+            this.radioButtonUrgente.Name = "radioButtonUrgente";
+            this.radioButtonUrgente.Size = new System.Drawing.Size(84, 21);
+            this.radioButtonUrgente.TabIndex = 13;
+            this.radioButtonUrgente.TabStop = true;
+            this.radioButtonUrgente.Text = "Urgente";
+            this.radioButtonUrgente.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.radioButtonUrgente);
+            this.Controls.Add(this.radioButtonOrdinario);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.txtTelegrama);
             this.Controls.Add(this.lblCoste);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.cbUrgente);
             this.Name = "Form1";
             this.Text = "Practica 3.1 JCBP23-24";
             this.ResumeLayout(false);
@@ -120,7 +135,8 @@
         private System.Windows.Forms.TextBox txtTelegrama;
         private System.Windows.Forms.Label lblCoste;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.CheckBox cbUrgente;
+        private System.Windows.Forms.RadioButton radioButtonOrdinario;
+        private System.Windows.Forms.RadioButton radioButtonUrgente;
     }
 }
 
