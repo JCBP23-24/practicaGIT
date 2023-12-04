@@ -20,7 +20,7 @@ namespace practica31_JCBP_2324
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
 
@@ -31,13 +31,13 @@ namespace practica31_JCBP_2324
 
                 tipoTelegrama = 'u';
             //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(' ').Length;
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + 0.5 * (numPalabras - 10);
             else
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
